@@ -1,10 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import  * as React from 'react';
-import Map from './components/Map';
-import Modal from './components/Modal'
-import Panel from './components/Panel'
 import { StyleSheet, Text, View, Dimensions} from 'react-native';
-
+import {  Map, Modal} from './components' //Agregar Panel
 export default function App() {
 
   const handleLongPress = ({ nativeEvent}) =>{
@@ -14,7 +11,6 @@ export default function App() {
     <View style={styles.container}>
       <Map onLongPress={handleLongPress}/>
       <Modal/>
-      <Panel/>
     </View>
   );
 }
